@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-24",
+  "checkedAt": "2026-11-24T06:53:41.341863+00:00",
+  "urls": {
+    "https://krillionanswers.wiki/": "2026-11-24",
+    "https://krillionanswers.wiki/about": "2026-11-24",
+    "https://krillionanswers.wiki/answers": "2026-11-24",
+    "https://krillionanswers.wiki/answers/archive": "2026-11-24",
+    "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938": "2026-11-24",
+    "https://krillionanswers.wiki/answers/best-picture-winners-1932-1936": "2026-11-24",
+    "https://krillionanswers.wiki/answers/countries-iso-code-starting-with-m": "2026-11-24",
+    "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h": "2026-11-24",
+    "https://krillionanswers.wiki/answers/south-america-sovereign-states": "2026-11-24",
+    "https://krillionanswers.wiki/answers/states-abbreviation-ending-in-i": "2026-11-24",
+    "https://krillionanswers.wiki/answers/world-cup-2018-group-e": "2026-11-24",
+    "https://krillionanswers.wiki/how-to-play": "2026-11-24",
+    "https://krillionanswers.wiki/privacy": "2026-11-24",
+    "https://krillionanswers.wiki/rare-answers": "2026-11-24",
+    "https://krillionanswers.wiki/scoring": "2026-11-24",
+    "https://krillionanswers.wiki/strategy": "2026-11-24"
+  },
+  "total": 16,
+  "statusDistribution": {
+    "200": 16
+  },
+  "added": [
+    "https://krillionanswers.wiki/",
+    "https://krillionanswers.wiki/about",
+    "https://krillionanswers.wiki/answers",
+    "https://krillionanswers.wiki/answers/archive",
+    "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938",
+    "https://krillionanswers.wiki/answers/best-picture-winners-1932-1936",
+    "https://krillionanswers.wiki/answers/countries-iso-code-starting-with-m",
+    "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h",
+    "https://krillionanswers.wiki/answers/south-america-sovereign-states",
+    "https://krillionanswers.wiki/answers/states-abbreviation-ending-in-i",
+    "https://krillionanswers.wiki/answers/world-cup-2018-group-e",
+    "https://krillionanswers.wiki/how-to-play",
+    "https://krillionanswers.wiki/privacy",
+    "https://krillionanswers.wiki/rare-answers",
+    "https://krillionanswers.wiki/scoring",
+    "https://krillionanswers.wiki/strategy"
+  ],
+  "removed": [],
+  "pages": [
+    {
+      "url": "https://krillionanswers.wiki/",
+      "status": 200,
+      "title": "Krillion Answers: Rare Scores & Dive Depth Explained",
+      "canonical": [
+        "https://krillionanswers.wiki/"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/about",
+      "status": 200,
+      "title": "About This Krillion Answers Guide",
+      "canonical": [
+        "https://krillionanswers.wiki/about"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers",
+      "status": 200,
+      "title": "Krillion Answers Today: 24 November 2026 Daily Dive",
+      "canonical": [
+        "https://krillionanswers.wiki/answers"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/archive",
+      "status": 200,
+      "title": "Krillion Answers Archive: Every Daily Dive, Prompt by Prompt",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/archive"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938",
+      "status": 200,
+      "title": "Krillion Answers: Best Picture Directors 1927-1938",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/best-picture-winners-1932-1936",
+      "status": 200,
+      "title": "Krillion Answers: Best Picture Winners 1932 to 1936",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/best-picture-winners-1932-1936"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/countries-iso-code-starting-with-m",
+      "status": 200,
+      "title": "Krillion Answers: Countries Whose ISO Code Starts With M",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/countries-iso-code-starting-with-m"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h",
+      "status": 200,
+      "title": "Krillion Answers: Chemical Elements Starting With H",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/south-america-sovereign-states",
+      "status": 200,
+      "title": "Krillion Answers: Sovereign States in South America",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/south-america-sovereign-states"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/states-abbreviation-ending-in-i",
+      "status": 200,
+      "title": "Krillion Answers: US States Whose Abbreviation Ends in I",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/states-abbreviation-ending-in-i"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/world-cup-2018-group-e",
+      "status": 200,
+      "title": "Krillion Answers: Every Team in 2018 World Cup Group E",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/world-cup-2018-group-e"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/how-to-play",
+      "status": 200,
+      "title": "How to Play Krillion: 7 Prompts, 20 Seconds Each",
+      "canonical": [
+        "https://krillionanswers.wiki/how-to-play"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/privacy",
+      "status": 200,
+      "title": "Privacy Policy | Krillion Answers",
+      "canonical": [
+        "https://krillionanswers.wiki/privacy"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/rare-answers",
+      "status": 200,
+      "title": "Krillion Rare Answers: What Counts as Uncommon",
+      "canonical": [
+        "https://krillionanswers.wiki/rare-answers"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/scoring",
+      "status": 200,
+      "title": "Krillion Scoring and Depth: 1 Point = 10 Metres",
+      "canonical": [
+        "https://krillionanswers.wiki/scoring"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/strategy",
+      "status": 200,
+      "title": "Krillion Strategy: The 20-Second Answer Routine",
+      "canonical": [
+        "https://krillionanswers.wiki/strategy"
+      ],
+      "noindex": false,
+      "errors": []
+    }
+  ],
+  "errors": []
+}
