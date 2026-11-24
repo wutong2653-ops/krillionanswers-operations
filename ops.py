@@ -14,7 +14,7 @@ def save(path,obj):
 def read(path,default=None):
  p=ROOT/path;return json.loads(p.read_text()) if p.exists() else default
 def http(url,payload=None):
- req=urllib.request.Request(url,data=json.dumps(payload).encode() if payload is not None else None,headers={'Content-Type':'application/json'} if payload is not None else {})
+ req=urllib.request.Request(url,data=json.dumps(payload).encode() if payload is not None else None,headers={'Content-Type':'application/json; charset=utf-8'} if payload is not None else {})
  try:
   if urllib.parse.urlsplit(url).hostname=='krillionanswers.wiki':
    with tempfile.TemporaryDirectory() as td:
