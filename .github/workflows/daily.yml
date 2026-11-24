@@ -59,6 +59,18 @@ jobs:
             run_task indexnow
           fi
           echo "failed=$result" >> "$GITHUB_OUTPUT"
+      - name: Preserve pending queue before backoff
+        if: steps.execute.outputs.rate_limited == 'true'
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add logs state
+          if ! git diff --cached --quiet; then
+            git commit -m "Preserve rate limit queue ${GITHUB_RUN_ID}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
       - name: Retry rate limit once after 45 minutes
         id: retry
         if: steps.execute.outputs.rate_limited == 'true'
