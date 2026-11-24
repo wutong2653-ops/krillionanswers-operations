@@ -1,0 +1,101 @@
+name: Daily operations
+on:
+  schedule:
+    - cron: '10 0 * * *'
+    - cron: '0 1 * * *'
+    - cron: '30 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: Task to execute
+        type: choice
+        options: [health, indexnow, archive, weekly]
+        default: health
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: krillion-operations
+  cancel-in-progress: false
+jobs:
+  operate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 85
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute task
+        id: execute
+        shell: bash
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          TASK: ${{ inputs.task }}
+        run: |
+          set +e
+          result=0
+          run_task() {
+            python3 ops.py "$@"
+            code=$?
+            if [ "$code" -eq 75 ]; then
+              echo "rate_limited=true" >> "$GITHUB_OUTPUT"
+            elif [ "$code" -ne 0 ]; then
+              result=1
+            fi
+          }
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            run_task "$TASK"
+          elif [ "$SCHEDULE" = '10 0 * * *' ]; then
+            run_task archive
+          elif [ "$SCHEDULE" = '30 1 * * 1' ]; then
+            run_task weekly
+          else
+            run_task health
+            run_task indexnow
+          fi
+          echo "failed=$result" >> "$GITHUB_OUTPUT"
+      - name: Retry rate limit once after 45 minutes
+        id: retry
+        if: steps.execute.outputs.rate_limited == 'true'
+        shell: bash
+        run: |
+          sleep 2700
+          set +e
+          python3 ops.py indexnow --retry
+          code=$?
+          if [ "$code" -ne 0 ] && [ "$code" -ne 75 ]; then
+            echo 'failed=1' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Persist state and logs
+        if: always()
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add logs state history
+          if [ -f latest.json ]; then git add latest.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Record operations ${GITHUB_RUN_ID}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ github.run_id }}
+          path: |
+            logs/
+            state/
+          retention-days: 30
+      - name: Fail visibly on errors
+        if: steps.execute.outputs.failed == '1' || steps.retry.outputs.failed == '1'
+        run: exit 1
+      - name: Alert workflow infrastructure failures
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" --title '[Krillion operations] Workflow failure' --body "A workflow step failed. Logs: $RUN_URL"

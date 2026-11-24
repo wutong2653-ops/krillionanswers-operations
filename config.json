@@ -1,0 +1,8 @@
+{
+  "site": "https://krillionanswers.wiki",
+  "sitemap": "https://krillionanswers.wiki/sitemap.xml",
+  "indexnowEndpoint": "https://api.indexnow.org/indexnow",
+  "indexnowKey": "984687ea7f6730b78db77f04f5465d63",
+  "indexnowKeyLocation": "https://krillionanswers.wiki/984687ea7f6730b78db77f04f5465d63.txt",
+  "retrySeconds": 2700
+}
