@@ -1,0 +1,20 @@
+{
+  "site": "https://krillionanswers.wiki/",
+  "verified": true,
+  "verificationHttpStatus": 200,
+  "sitemapSubmitHttpStatus": 200,
+  "feedReadHttpStatus": 200,
+  "feeds": [
+    {
+      "__type": "Feed:#Microsoft.Bing.Webmaster.Api",
+      "Compressed": false,
+      "FileSize": 0,
+      "LastCrawled": "/Date(-11644473600000)/",
+      "Status": "Pending",
+      "Submitted": "/Date(1795503263292)/",
+      "Type": "",
+      "Url": "https://krillionanswers.wiki/sitemap.xml",
+      "UrlCount": 0
+    }
+  ]
+}

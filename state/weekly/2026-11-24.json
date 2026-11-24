@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-24",
+  "baselineDate": "2026-11-24",
+  "partialWeek": true,
+  "total": 16,
+  "statusDistribution": {
+    "200": 16
+  },
+  "added": [],
+  "removed": []
+}
