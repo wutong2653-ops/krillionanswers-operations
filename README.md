@@ -11,4 +11,4 @@ Schedules: archive 00:10 UTC; website health + IndexNow 01:00 UTC; weekly Monday
 
 IndexNow public verification key and existing root keyLocation belong in `config.json`; the Bing Webmaster account API key is a different credential and must never go here. Scripts never publish or edit the website key file.
 
-Run locally with Python 3.9+ and authenticated `gh`, e.g. `python3 ops.py health`. Scheduled jobs use Python 3.12. `curl` is available on GitHub runners if the own-site health transport is configured to use it. Archive transport always uses ordinary urllib directly and stops when blocked.
+Run locally with Python 3.9+ and authenticated `gh`, e.g. `python3 ops.py health`. Scheduled jobs use Python 3.12. Own-site reads use native curl with its default headers; no UA impersonation. Archive transport always uses ordinary urllib directly and stops when blocked.
