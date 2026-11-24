@@ -91,6 +91,8 @@ jobs:
           path: |
             logs/
             state/
+            history/
+            latest.json
           retention-days: 30
       - name: Fail visibly on errors
         if: steps.execute.outputs.failed == '1' || steps.retry.outputs.failed == '1'

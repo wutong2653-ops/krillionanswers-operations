@@ -31,7 +31,7 @@ def http(url,payload=None):
    with urllib.request.urlopen(req,timeout=35) as r:status=r.status;body=r.read();headers=dict(r.headers);final=r.url
  except urllib.error.HTTPError as e:status=e.code;body=e.read();headers=dict(e.headers);final=e.url
  except Exception as e:status=0;body=str(e).encode();headers={};final=url
- row={'time':dt.datetime.now(dt.timezone.utc).isoformat(),'method':req.method,'url':url,'status':status,'finalUrl':final,'bodyFirst200':body.decode(errors='replace')[:200]}
+ row={'time':dt.datetime.now(dt.timezone.utc).isoformat(),'method':req.get_method(),'url':url,'status':status,'finalUrl':final,'bodyFirst200':body.decode(errors='replace')[:200]}
  with LOG.open('a') as f:f.write(json.dumps(row,ensure_ascii=False)+'\n')
  print(json.dumps(row,ensure_ascii=False),flush=True)
  return status,body,headers,final

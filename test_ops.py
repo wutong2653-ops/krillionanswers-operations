@@ -1,4 +1,5 @@
-import unittest,tempfile,json,time,datetime as dt
+import unittest,tempfile,json,time,datetime as dt,io,urllib.error
+from unittest.mock import MagicMock
 from pathlib import Path
 from unittest.mock import patch
 import ops
@@ -39,6 +40,24 @@ class OperationsTests(unittest.TestCase):
   b=json.dumps({'data':{'content':c,'schedule':{'themeId':'general'}}}).encode()
   with patch.object(ops,'http',return_value=(200,b,{},'')):self.assertEqual(ops.archive(),0)
   self.assertNotIn('answers',(self.root/'latest.json').read_text());self.assertEqual(len(ops.read('latest.json')['questions']),7)
+ def test_http_records_403_and_body_without_retry(self):
+  oldlog=ops.LOG;ops.LOG=self.root/'receipt.jsonl'
+  try:
+   err=urllib.error.HTTPError('https://www.krillion.org/api/today/',403,'Forbidden',{},io.BytesIO(b'error code: 1010'))
+   with patch.object(ops.urllib.request,'urlopen',side_effect=err) as net:
+    status,body,_,_=ops.http('https://www.krillion.org/api/today/')
+    self.assertEqual(status,403);self.assertEqual(body,b'error code: 1010');self.assertEqual(net.call_count,1)
+   receipt=json.loads(ops.LOG.read_text());self.assertEqual(receipt['method'],'GET');self.assertEqual(receipt['status'],403);self.assertEqual(receipt['bodyFirst200'],'error code: 1010')
+  finally:ops.LOG=oldlog
+ def test_http_success_records_post_method(self):
+  oldlog=ops.LOG;ops.LOG=self.root/'receipt.jsonl'
+  try:
+   response=MagicMock();response.status=202;response.read.return_value=b'';response.headers={};response.url='https://api.indexnow.org/indexnow'
+   response.__enter__.return_value=response
+   with patch.object(ops.urllib.request,'urlopen',return_value=response):
+    self.assertEqual(ops.http(response.url,{'host':'krillionanswers.wiki'})[0],202)
+   self.assertEqual(json.loads(ops.LOG.read_text())['method'],'POST')
+  finally:ops.LOG=oldlog
  def test_archive_rejects_wrong_day(self):
   b=json.dumps({'data':{'content':{'publishDate':'1999-01-01','timezone':'UTC','questions':[{}]*7}}}).encode()
   with patch.object(ops,'http',return_value=(200,b,{},'')):
