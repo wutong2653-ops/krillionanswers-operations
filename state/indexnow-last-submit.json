@@ -1,23 +1,17 @@
 {
-  "date": "2026-11-24",
-  "status": 202,
+  "date": "2026-11-25",
+  "status": 200,
   "urls": [
     "https://krillionanswers.wiki/",
-    "https://krillionanswers.wiki/about",
     "https://krillionanswers.wiki/answers",
+    "https://krillionanswers.wiki/answers/2026-11-24",
+    "https://krillionanswers.wiki/answers/african-countries-starting-with-b",
     "https://krillionanswers.wiki/answers/archive",
     "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938",
-    "https://krillionanswers.wiki/answers/best-picture-winners-1932-1936",
-    "https://krillionanswers.wiki/answers/countries-iso-code-starting-with-m",
-    "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h",
-    "https://krillionanswers.wiki/answers/south-america-sovereign-states",
-    "https://krillionanswers.wiki/answers/states-abbreviation-ending-in-i",
-    "https://krillionanswers.wiki/answers/world-cup-2018-group-e",
-    "https://krillionanswers.wiki/how-to-play",
-    "https://krillionanswers.wiki/privacy",
-    "https://krillionanswers.wiki/rare-answers",
-    "https://krillionanswers.wiki/scoring",
-    "https://krillionanswers.wiki/strategy"
+    "https://krillionanswers.wiki/answers/best-picture-winners-starting-with-p",
+    "https://krillionanswers.wiki/answers/elements-atomic-number-13-24",
+    "https://krillionanswers.wiki/answers/world-cup-1978-group-3",
+    "https://krillionanswers.wiki/answers/world-cup-finals-1978-1986"
   ],
   "acceptedForProcessing": true
 }
