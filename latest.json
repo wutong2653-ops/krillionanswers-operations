@@ -1,36 +1,36 @@
 {
-  "fetchedAt": "2026-11-27T02:59:09.452429Z",
-  "date": "2026-11-26",
-  "dayNumber": 134,
-  "resetsAt": "2026-11-27T05:00:00.000Z",
+  "fetchedAt": "2026-11-27T15:08:03.886963Z",
+  "date": "2026-11-27",
+  "dayNumber": 135,
+  "resetsAt": "2026-11-28T05:00:00.000Z",
   "prompts": [
     {
       "id": "p1",
-      "text": "Name a magazine"
+      "text": "Name a fruit that’s fuzzy, hairy, or spiky on the outside"
     },
     {
       "id": "p2",
-      "text": "Name a one-word food or drink containing a double letter (like coffee)"
+      "text": "Name a live-action movie released in the 2010s (1,000+ IMDb votes)"
     },
     {
       "id": "p3",
-      "text": "Name a piece of information you can see on a sports scoreboard"
+      "text": "Name a way to travel in or on water"
     },
     {
       "id": "p4",
-      "text": "Name a country where elephants live in the wild"
+      "text": "Name a sport where you’re allowed to kick your opponent"
     },
     {
       "id": "p5",
-      "text": "Name a TV show that has a spin-off series"
+      "text": "Name a job that involves drawing"
     },
     {
       "id": "p6",
-      "text": "Name a river over 50 miles long (about 80 km)"
+      "text": "Name a song on a movie soundtrack from Disney Animation, Pixar, DreamWorks Animation, Illumination, Sony Pictures Animation, or Blue Sky"
     },
     {
       "id": "p7",
-      "text": "Name a type of device with a built-in microphone"
+      "text": "Name a term for a division of land (like a country)"
     }
   ],
   "sourceUrl": "https://krillion.io/api/today"
