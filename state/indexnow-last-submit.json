@@ -1,18 +1,20 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "status": 200,
   "urls": [
+    "https://krillionanswers.wiki/",
+    "https://krillionanswers.wiki/about",
     "https://krillionanswers.wiki/answers",
-    "https://krillionanswers.wiki/answers/2026-11-24",
-    "https://krillionanswers.wiki/answers/2026-11-25",
+    "https://krillionanswers.wiki/answers/2026-11-26",
+    "https://krillionanswers.wiki/answers/2026-11-27",
     "https://krillionanswers.wiki/answers/archive",
-    "https://krillionanswers.wiki/answers/best-picture-directors-1936-1945",
-    "https://krillionanswers.wiki/answers/best-picture-winners-five-word-titles",
-    "https://krillionanswers.wiki/answers/countries-iso-code-ending-in-i",
-    "https://krillionanswers.wiki/answers/elements-atomic-number-7-18",
-    "https://krillionanswers.wiki/answers/elements-symbol-starting-with-c",
-    "https://krillionanswers.wiki/answers/national-capitals-containing-g",
-    "https://krillionanswers.wiki/answers/world-cup-1998-group-h"
+    "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938",
+    "https://krillionanswers.wiki/answers/world-cup-2018-group-e",
+    "https://krillionanswers.wiki/hints",
+    "https://krillionanswers.wiki/how-to-play",
+    "https://krillionanswers.wiki/rare-answers",
+    "https://krillionanswers.wiki/scoring",
+    "https://krillionanswers.wiki/strategy"
   ],
   "acceptedForProcessing": true
 }
