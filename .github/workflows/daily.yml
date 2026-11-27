@@ -1,7 +1,7 @@
-name: Daily operations
+name: Krillion Dive archive and daily operations
 on:
   schedule:
-    - cron: '10 0 * * *'
+    - cron: '20 5 * * *'
     - cron: '0 1 * * *'
     - cron: '30 1 * * 1'
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test queue and archive safeguards
-        run: python3 -m unittest -v test_ops.py
+        run: python3 -m unittest -v test_ops.py test_archive_daily.py
       - name: Execute task
         id: execute
         shell: bash
@@ -50,7 +50,7 @@ jobs:
           }
           if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
             run_task "$TASK"
-          elif [ "$SCHEDULE" = '10 0 * * *' ]; then
+          elif [ "$SCHEDULE" = '20 5 * * *' ]; then
             run_task archive
           elif [ "$SCHEDULE" = '30 1 * * 1' ]; then
             run_task weekly

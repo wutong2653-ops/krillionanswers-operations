@@ -30,22 +30,12 @@ class OperationsTests(unittest.TestCase):
   with patch.object(ops,'sitemap',return_value={self.url:'x'}),patch.object(ops,'http',return_value=(200,html,{},self.url)),patch.object(ops.time,'sleep'),patch.object(ops,'issue') as issue:
    self.assertEqual(ops.health(),1);issue.assert_called_once()
   r=ops.read('state/health-latest.json');self.assertTrue(r['pages'][0]['noindex']);self.assertEqual(len(r['errors']),1)
- def test_archive_stops_on_block_without_retry(self):
-  with patch.object(ops,'http',return_value=(403,b'error code: 1010',{},'')) as h:
-   with self.assertRaisesRegex(RuntimeError,'403'):ops.archive()
-   self.assertEqual(h.call_count,1)
-  self.assertFalse((self.root/'latest.json').exists())
- def test_archive_saves_only_metadata_and_prompts(self):
-  c={'publishDate':ops.DAY,'timezone':'UTC','contentId':'id','contentHash':'hash','questions':[{'id':str(i),'prompt':'Q'+str(i),'answers':['never save']} for i in range(7)]}
-  b=json.dumps({'data':{'content':c,'schedule':{'themeId':'general'}}}).encode()
-  with patch.object(ops,'http',return_value=(200,b,{},'')):self.assertEqual(ops.archive(),0)
-  self.assertNotIn('answers',(self.root/'latest.json').read_text());self.assertEqual(len(ops.read('latest.json')['questions']),7)
  def test_http_records_403_and_body_without_retry(self):
   oldlog=ops.LOG;ops.LOG=self.root/'receipt.jsonl'
   try:
-   err=urllib.error.HTTPError('https://www.krillion.org/api/today/',403,'Forbidden',{},io.BytesIO(b'error code: 1010'))
+   err=urllib.error.HTTPError('https://krillion.io/api/today',403,'Forbidden',{},io.BytesIO(b'error code: 1010'))
    with patch.object(ops.urllib.request,'urlopen',side_effect=err) as net:
-    status,body,_,_=ops.http('https://www.krillion.org/api/today/')
+    status,body,_,_=ops.http('https://krillion.io/api/today')
     self.assertEqual(status,403);self.assertEqual(body,b'error code: 1010');self.assertEqual(net.call_count,1)
    receipt=json.loads(ops.LOG.read_text());self.assertEqual(receipt['method'],'GET');self.assertEqual(receipt['status'],403);self.assertEqual(receipt['bodyFirst200'],'error code: 1010')
   finally:ops.LOG=oldlog
@@ -58,8 +48,4 @@ class OperationsTests(unittest.TestCase):
     self.assertEqual(ops.http(response.url,{'host':'krillionanswers.wiki'})[0],202)
    self.assertEqual(json.loads(ops.LOG.read_text())['method'],'POST')
   finally:ops.LOG=oldlog
- def test_archive_rejects_wrong_day(self):
-  b=json.dumps({'data':{'content':{'publishDate':'1999-01-01','timezone':'UTC','questions':[{}]*7}}}).encode()
-  with patch.object(ops,'http',return_value=(200,b,{},'')):
-   with self.assertRaises(RuntimeError):ops.archive()
 if __name__=='__main__':unittest.main()

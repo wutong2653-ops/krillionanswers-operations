@@ -95,17 +95,11 @@ def health():
  if bad:issue('Health alert','\n'.join(bad)+'\n\nFull HTTP evidence: logs/ and state/health-latest.json');return 1
  return 0
 def archive():
- endpoint='https://www.krillion.org/api/today/?themeId=general'
- status,body,_,_=http(endpoint)
- if status!=200:raise RuntimeError(f'Archive HTTP {status}: '+body.decode(errors='replace')[:200])
- data=json.loads(body)['data'];c=data['content'];qs=c['questions'];day=c['publishDate']
- if day!=DAY or c.get('timezone')!='UTC' or len(qs)!=7:raise RuntimeError('Archive date, timezone or question count mismatch')
- if any(not isinstance(q.get('prompt'),str) or not isinstance(q.get('id'),str) for q in qs):raise RuntimeError('Question schema changed')
- out={'date':day,'timezone':c['timezone'],'themeId':data['schedule']['themeId'],'contentId':c['contentId'],'contentHash':c['contentHash'],'source':endpoint,'fetchedAt':NOW.isoformat(),'questions':[{'id':q['id'],'prompt':q['prompt']} for q in qs]}
- old=read(f'history/{day}.json')
- if old and old['contentHash']!=out['contentHash']:raise RuntimeError('Existing immutable daily archive has a different contentHash')
- if not old:save(f'history/{day}.json',out)
- save('latest.json',old or out);return 0
+ from archive_daily import archive as fetch_archive
+ def archive_log(message):
+  print(message,flush=True)
+  with LOG.open('a') as f:f.write(message+'\n')
+ return fetch_archive(ROOT,log=archive_log)
 def indexnow(retry=False):
  current=sitemap() if not retry else None
  old=read('state/indexnow-accepted.json',{});pending=read('state/indexnow-pending.json',{})
@@ -142,7 +136,7 @@ if __name__=='__main__':
  try:code=indexnow(args.retry) if args.task=='indexnow' else globals()[args.task]()
  except Exception as e:
   message=f'{args.task}: {type(e).__name__}: {e}';print(message,file=sys.stderr)
-  save('state/'+args.task+'-failure.json',{'date':DAY,'error':message,'log':str(LOG.relative_to(ROOT))})
+  if args.task!='archive':save('state/'+args.task+'-failure.json',{'date':DAY,'error':message,'log':str(LOG.relative_to(ROOT))})
   try:issue(args.task+' failure',message+'\n\nSee repository logs and Actions artifacts.')
   except Exception as alert_error:print('ALERT DELIVERY FAILED:',alert_error,file=sys.stderr)
   code=1
