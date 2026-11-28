@@ -1,36 +1,36 @@
 {
-  "fetchedAt": "2026-11-27T15:08:03.886963Z",
-  "date": "2026-11-27",
-  "dayNumber": 135,
-  "resetsAt": "2026-11-28T05:00:00.000Z",
+  "fetchedAt": "2026-11-28T14:15:04.454276Z",
+  "date": "2026-11-28",
+  "dayNumber": 136,
+  "resetsAt": "2026-11-29T05:00:00.000Z",
   "prompts": [
     {
       "id": "p1",
-      "text": "Name a fruit that’s fuzzy, hairy, or spiky on the outside"
+      "text": "Name a green fruit or vegetable"
     },
     {
       "id": "p2",
-      "text": "Name a live-action movie released in the 2010s (1,000+ IMDb votes)"
+      "text": "Name a city in South America, Central America, Mexico, or the Caribbean (towns count too)"
     },
     {
       "id": "p3",
-      "text": "Name a way to travel in or on water"
+      "text": "Name a musician who has passed away and still has at least 1 million monthly listeners on Spotify"
     },
     {
       "id": "p4",
-      "text": "Name a sport where you’re allowed to kick your opponent"
+      "text": "Name a player who won a league title in the NBA, Premier League, La Liga, AFL, or IPL (women’s equivalents count too)"
     },
     {
       "id": "p5",
-      "text": "Name a job that involves drawing"
+      "text": "Name a first-person shooter game"
     },
     {
       "id": "p6",
-      "text": "Name a song on a movie soundtrack from Disney Animation, Pixar, DreamWorks Animation, Illumination, Sony Pictures Animation, or Blue Sky"
+      "text": "Name a protagonist from a book that sold at least 500,000 copies (no manga)"
     },
     {
       "id": "p7",
-      "text": "Name a term for a division of land (like a country)"
+      "text": "Name a term from astrology"
     }
   ],
   "sourceUrl": "https://krillion.io/api/today"
