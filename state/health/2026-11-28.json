@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-28",
+  "checkedAt": "2026-11-28T08:43:43.966752+00:00",
+  "urls": {
+    "https://krillionanswers.wiki/": "2026-11-27",
+    "https://krillionanswers.wiki/about": "2026-11-27",
+    "https://krillionanswers.wiki/answers": "2026-11-27",
+    "https://krillionanswers.wiki/answers/2026-11-26": "2026-11-27",
+    "https://krillionanswers.wiki/answers/2026-11-27": "2026-11-27",
+    "https://krillionanswers.wiki/answers/archive": "2026-11-27",
+    "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938": "2026-11-27",
+    "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h": "2026-11-24",
+    "https://krillionanswers.wiki/answers/world-cup-2018-group-e": "2026-11-27",
+    "https://krillionanswers.wiki/hints": "2026-11-27",
+    "https://krillionanswers.wiki/how-to-play": "2026-11-27",
+    "https://krillionanswers.wiki/privacy": "2026-11-24",
+    "https://krillionanswers.wiki/rare-answers": "2026-11-27",
+    "https://krillionanswers.wiki/scoring": "2026-11-27",
+    "https://krillionanswers.wiki/strategy": "2026-11-27"
+  },
+  "total": 15,
+  "statusDistribution": {
+    "200": 15
+  },
+  "added": [],
+  "removed": [],
+  "pages": [
+    {
+      "url": "https://krillionanswers.wiki/",
+      "status": 200,
+      "title": "Krillion Answers Today: Dive #135 Prompts and Answers",
+      "canonical": [
+        "https://krillionanswers.wiki/"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/about",
+      "status": 200,
+      "title": "About This Krillion Answers Guide",
+      "canonical": [
+        "https://krillionanswers.wiki/about"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers",
+      "status": 200,
+      "title": "Krillion Answers Today: Dive #135, 27 November 2026",
+      "canonical": [
+        "https://krillionanswers.wiki/answers"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/2026-11-26",
+      "status": 200,
+      "title": "Krillion Dive #134 Answers: 26 November 2026 Prompts",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/2026-11-26"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/2026-11-27",
+      "status": 200,
+      "title": "Krillion Dive #135 Answers: 27 November 2026",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/2026-11-27"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/archive",
+      "status": 200,
+      "title": "Krillion Answers Archive: Every Dive, Prompt by Prompt",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/archive"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938",
+      "status": 200,
+      "title": "Krillion Answers: Best Picture Directors 1927-1938",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/best-picture-directors-1927-1938"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h",
+      "status": 200,
+      "title": "Krillion Answers: Chemical Elements Starting With H",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/elements-symbol-starting-with-h"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/answers/world-cup-2018-group-e",
+      "status": 200,
+      "title": "Krillion Answers: Every Team in 2018 World Cup Group E",
+      "canonical": [
+        "https://krillionanswers.wiki/answers/world-cup-2018-group-e"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/hints",
+      "status": 200,
+      "title": "Krillion Hints Today: Dive #135 Spoiler-Free Clues",
+      "canonical": [
+        "https://krillionanswers.wiki/hints"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/how-to-play",
+      "status": 200,
+      "title": "How to Play Krillion: 7 Prompts, 25 Seconds Each",
+      "canonical": [
+        "https://krillionanswers.wiki/how-to-play"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/privacy",
+      "status": 200,
+      "title": "Privacy Policy | Krillion Answers",
+      "canonical": [
+        "https://krillionanswers.wiki/privacy"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/rare-answers",
+      "status": 200,
+      "title": "Krillion Rare Answers: What Counts as Uncommon",
+      "canonical": [
+        "https://krillionanswers.wiki/rare-answers"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/scoring",
+      "status": 200,
+      "title": "Krillion Scoring and Depth: 1 Point = 10 Metres",
+      "canonical": [
+        "https://krillionanswers.wiki/scoring"
+      ],
+      "noindex": false,
+      "errors": []
+    },
+    {
+      "url": "https://krillionanswers.wiki/strategy",
+      "status": 200,
+      "title": "Krillion Strategy: The 25-Second Answer Routine",
+      "canonical": [
+        "https://krillionanswers.wiki/strategy"
+      ],
+      "noindex": false,
+      "errors": []
+    }
+  ],
+  "errors": []
+}
